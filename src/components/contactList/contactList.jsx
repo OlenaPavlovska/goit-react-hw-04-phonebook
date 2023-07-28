@@ -6,10 +6,10 @@ import css from './contactList.module.css'
 export const ContactList = ({ contacts, onDelete }) => {
     return (
         <ul className={css.contactList}>
-            {contacts.map((contact) => (
-                <li className={css.list} key={contact.id}>
-                    <p className={css.text}>{contact.name}:  {contact.number}</p>
-                    <button className={css.btnAddContacts}  type='button' onClick={()=>onDelete(contact.id)}>Delete</button>
+            {contacts.map((id,name,number) => (
+                <li className={css.list} key={id}>
+                    <p className={css.text}>{name}:  {number}</p>
+                    <button className={css.btnAddContacts}  type='button' onClick={()=>onDelete(id)}>Delete</button>
                 </li>
             ))}
 
