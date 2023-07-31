@@ -25,14 +25,13 @@ useEffect(() => {
   const addContact = contact => {
 if (findContact(contact.name)) return
      alert(`${contact.name} is already in contacts`);
-  return  setContacts(prevState => {
-   return [...prevState, { id: nanoid(), ...contact }]
-  })||true;
+  return  setContacts(prevState => [...prevState, { id: nanoid(), ...contact }]
+  )||true;
 };   
   
-const  filterChange = (e) => {
+const  filterChange = e => 
  setFilter(e.target.value );
-};
+;
 
   const filterContacts = () => contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()))
   
@@ -54,7 +53,7 @@ const  filterChange = (e) => {
           filter={filter}
           handleChange={filterChange}
           />
-          <ContactList contacts={filterContacts()} onDelete={onDelete} />
+          <ContactList contacts={filterContacts} onDelete={onDelete} />
       </Section>
     </>
   );

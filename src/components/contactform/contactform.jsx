@@ -5,15 +5,10 @@ export const ContactForm = ({ onSubmit }) => {
     const [name, setName] = useState('')
     const [number, setNumber] = useState('')
     
-    const setState = {
-        name: setName,
-        number: setNumber
-    }
+  
 
-    const handleChange = e => {
-        const { name, value } = e.target
-        setState[name](value)
-    }
+    const handleChange = e => setName(e.target.value) 
+
     const reset = () => {
         setName('')
         setNumber('')
