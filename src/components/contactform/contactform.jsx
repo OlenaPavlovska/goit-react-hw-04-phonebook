@@ -13,10 +13,11 @@ export const ContactForm = ({ onSubmit }) => {
             case'name':
             setName(value)
             break
-            case'nuber':
+            case'number':
             setNumber(value)
             break
-            default:break;
+            default:
+                break;
         }
     }
 
