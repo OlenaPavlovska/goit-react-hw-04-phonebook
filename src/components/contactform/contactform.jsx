@@ -7,7 +7,18 @@ export const ContactForm = ({ onSubmit }) => {
     
   
 
-    const handleChange = e => setName(e.target.value) 
+    const handleChange = e =>  {
+        const{name,value}=e.target
+        switch(name){
+            case'name':
+            setName(value)
+            break
+            case'nuber':
+            setNumber(value)
+            break
+            default:break;
+        }
+    }
 
     const reset = () => {
         setName('')
