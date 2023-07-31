@@ -16,7 +16,8 @@ export const ContactForm = ({ onSubmit }) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        if (!onSubmit({ name, number })) return reset()
+        onSubmit({ name, number })
+         reset()
     }
 
  return (
