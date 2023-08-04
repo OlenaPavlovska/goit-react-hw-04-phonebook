@@ -8,7 +8,7 @@ import { ContactList } from "./contactList/contactList.jsx";
 
 
 export const App=() => {
-  const [contacts,setContacts] = useState('')
+  const [contacts,setContacts] = useState([])
   const [filter,setFilter] = useState('')
  
 
